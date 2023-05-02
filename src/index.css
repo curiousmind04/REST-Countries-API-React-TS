@@ -15,6 +15,7 @@
 }
 
 body {
+  background-color: hsl(0, 0%, 98%);
   font-family: "Nunito Sans", sans-serif;
   min-height: 100vh;
 }
