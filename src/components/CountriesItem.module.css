@@ -25,9 +25,15 @@
 }
 
 .info > h2 {
+  color: hsl(200, 15%, 8%);
   margin-bottom: 1rem;
 }
 
 .property {
+  color: hsl(200, 15%, 8%);
   font-weight: 600;
+}
+
+.info span {
+  color: hsl(200, 15%, 8%);
 }

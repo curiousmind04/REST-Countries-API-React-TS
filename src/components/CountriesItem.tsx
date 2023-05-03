@@ -16,7 +16,7 @@ const CountriesItem: React.FC<Props> = ({ country }) => {
         <img src={country.flags.png} />
       </div>
       <div className={classes.info}>
-        <h2>{country.name.official}</h2>
+        <h2>{country.name.common}</h2>
         <div>
           <span className={classes.property}>Population: </span>
           <span>{country.population.toLocaleString()}</span>

@@ -6,7 +6,8 @@ const RootLayout = () => {
     <>
       <header className={classes.header}>
         <h1>Where in the world?</h1>
-        <div>
+        <div className={classes.theme}>
+          <img src="/images/theme.svg" alt="theme icon" />
           <span>Dark Mode</span>
         </div>
       </header>

@@ -1,6 +1,6 @@
 declare module "myTypes" {
   type Country = {
-    name: { official: string };
+    name: { common: string };
     population: number;
     region: string;
     capital: string[];
