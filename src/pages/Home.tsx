@@ -1,31 +1,17 @@
-import { useEffect, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Country } from "myTypes";
 import classes from "./Home.module.css";
 import CountriesList from "../components/CountriesList";
 
-const HomePage = () => {
-  const [countries, setCountries] = useState<Country[]>();
+type Props = {
+  countries: Country[] | undefined;
+};
+
+const HomePage: React.FC<Props> = ({ countries }) => {
   const [filteredCountries, setFilteredCountries] = useState<Country[]>();
   const [showOptions, setShowOptions] = useState<boolean>(false);
   const [option, setOption] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    const sendRequest = async () => {
-      const response = await fetch("https://restcountries.com/v3.1/all");
-      if (!response.ok) {
-        console.log("error");
-        return;
-      }
-      const data = await response.json();
-      setCountries(data);
-    };
-    sendRequest();
-  }, []);
-
-  if (countries) {
-    console.log(countries[19]);
-  }
 
   const openFilterHandler = () => {
     setShowOptions((prevState) => !prevState);
@@ -151,6 +137,9 @@ const HomePage = () => {
       )}
       {filteredCountries && filteredCountries.length !== 0 && (
         <CountriesList countriesData={filteredCountries} />
+      )}
+      {!filteredCountries && !countries && (
+        <div className={classes.error}>No Countries Found</div>
       )}
     </div>
   );

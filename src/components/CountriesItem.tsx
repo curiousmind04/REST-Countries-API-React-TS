@@ -1,4 +1,5 @@
 import { Country } from "myTypes";
+import { Link } from "react-router-dom";
 import classes from "./CountriesItem.module.css";
 
 type Props = {
@@ -6,17 +7,15 @@ type Props = {
 };
 
 const CountriesItem: React.FC<Props> = ({ country }) => {
-  //   if (country.capital && country.capital.length && country.capital.length > 1) {
-  //     console.log(country.capital.length);
-  //   }
-
   return (
     <li className={classes.item}>
       <div className={classes.flag}>
-        <img src={country.flags.png} />
+        <img src={country.flags.png} alt="flag image" />
       </div>
       <div className={classes.info}>
-        <h2>{country.name.common}</h2>
+        <Link to={country.name.common}>
+          <h2>{country.name.common}</h2>
+        </Link>
         <div>
           <span className={classes.property}>Population: </span>
           <span>{country.population.toLocaleString()}</span>
@@ -27,17 +26,18 @@ const CountriesItem: React.FC<Props> = ({ country }) => {
         </div>
         <div>
           <span className={classes.property}>Capital: </span>
-          {!country.capital && <span>N/A</span>}
-          {country.capital && country.capital.length === 1 && (
-            <span>{country.capital}</span>
-          )}
-          {country.capital && country.capital.length === 2 && (
-            <span>{`${country.capital[0]}, ${country.capital[1]}`}</span>
-          )}
-          {country.capital && country.capital.length === 3 && (
-            <span>
-              {`${country.capital[0]}, ${country.capital[1]}, ${country.capital[2]}`}
-            </span>
+          {country.capital ? (
+            <div>
+              {country.capital.map((cap) => (
+                <p key={cap}>
+                  {country.capital.indexOf(cap) === country.capital.length - 1
+                    ? `${cap}`
+                    : `${cap},`}
+                </p>
+              ))}
+            </div>
+          ) : (
+            <p>N/A</p>
           )}
         </div>
       </div>

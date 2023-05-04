@@ -7,6 +7,8 @@ type Props = {
 };
 
 const CountriesList: React.FC<Props> = ({ countriesData }) => {
+  //   console.log(countriesData);
+
   return (
     <>
       {countriesData && (
