@@ -3,3 +3,9 @@
   margin-inline: auto;
   list-style: none;
 }
+
+@media (max-width: 19.25rem) {
+  .list {
+    max-width: 90%;
+  }
+}

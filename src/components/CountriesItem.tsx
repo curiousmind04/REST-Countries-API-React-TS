@@ -18,11 +18,11 @@ const CountriesItem: React.FC<Props> = ({ country }) => {
         </Link>
         <div>
           <span className={classes.property}>Population: </span>
-          <span>{country.population.toLocaleString()}</span>
+          <p>{country.population.toLocaleString()}</p>
         </div>
         <div>
           <span className={classes.property}>Region: </span>
-          <span>{country.region}</span>
+          <p>{country.region}</p>
         </div>
         <div>
           <span className={classes.property}>Capital: </span>

@@ -38,3 +38,9 @@
     background-color: var(--filter-hover);
   }
 }
+
+@media (max-width: 22rem) {
+  .container > a {
+    margin-bottom: 2.6rem;
+  }
+}

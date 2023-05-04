@@ -42,3 +42,22 @@
     background-color: var(--filter-hover);
   }
 }
+
+@media (max-width: 19.25rem) {
+  .header {
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
+  .header > .theme {
+    padding: 1rem 0.5rem 0rem 0.5rem;
+  }
+}
+
+@media (max-width: 22rem) {
+  .header > h1 {
+    font-size: 1rem;
+  }
+  .header span {
+    font-size: 0.8rem;
+  }
+}

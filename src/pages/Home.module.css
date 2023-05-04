@@ -126,3 +126,27 @@
     background-color: var(--filter-hover);
   }
 }
+
+@media (max-width: 22rem) {
+  .contain {
+    margin-bottom: 2rem;
+  }
+  .search {
+    padding-left: 3rem;
+    font-size: 0.8rem;
+  }
+  .search ~ svg {
+    left: 1rem;
+  }
+  .filter {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  .open > span,
+  .closed > span {
+    font-size: 0.8rem;
+  }
+  .options > div {
+    font-size: 0.8rem;
+  }
+}

@@ -23,16 +23,20 @@ const CountryDetail: React.FC<Props> = ({ country, countries }) => {
 
   const currenciesData: string[] = [];
 
-  for (let i = 0; i < Object.keys(country.currencies).length; i++) {
-    currenciesData.push(Object.values(country.currencies)[i].name);
+  if (country.currencies) {
+    for (let i = 0; i < Object.keys(country.currencies).length; i++) {
+      currenciesData.push(Object.values(country.currencies)[i].name);
+    }
   }
 
   //   console.log(currenciesData);
 
   const languagesData: string[] = [];
 
-  for (let i = 0; i < Object.keys(country.languages).length; i++) {
-    languagesData.push(Object.values(country.languages)[i]);
+  if (country.languages) {
+    for (let i = 0; i < Object.keys(country.languages).length; i++) {
+      languagesData.push(Object.values(country.languages)[i]);
+    }
   }
 
   //   console.log(languagesData);
