@@ -19,25 +19,25 @@
 }
 
 .info {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--header-color);
   padding: 1.7rem 1.5rem 2rem 1.5rem;
 }
 
 .info a {
   display: block;
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
   text-decoration: none;
   margin-bottom: 0.6rem;
 }
 
 .property {
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
   font-weight: 600;
 }
 
 .info span,
 .info p {
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
 }
 
 .info > :last-child {
@@ -55,6 +55,6 @@
 
 @media (hover: hover) {
   .info a:hover {
-    color: hsl(0, 0%, 43%);
+    color: var(--link-hover);
   }
 }

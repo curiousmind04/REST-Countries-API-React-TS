@@ -1,5 +1,5 @@
 .header {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--header-color);
   padding: 2rem 1rem;
   margin-bottom: 1.5rem;
   display: flex;
@@ -9,6 +9,7 @@
 }
 
 .header > h1 {
+  color: var(--text-color);
   font-size: 1.2rem;
 }
 
@@ -17,14 +18,27 @@
   flex-direction: row;
   align-items: center;
   gap: 0.4rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-.header img {
+.header svg {
   height: 1.4rem;
   width: 1.8rem;
+  color: var(--text-color);
+}
+
+.header svg path {
+  fill: var(--theme-icon);
 }
 
 .header span {
+  color: var(--text-color);
   font-weight: 600;
+}
+
+@media (hover: hover) {
+  .header > .theme:hover {
+    background-color: var(--filter-hover);
+  }
 }

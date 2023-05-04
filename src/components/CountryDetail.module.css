@@ -11,6 +11,7 @@
 }
 
 .flag ~ h2 {
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -31,6 +32,7 @@
 
 .geography li h3,
 .info li h3 {
+  color: var(--text-color);
   flex-shrink: 0;
   font-size: 1rem;
   font-weight: 600;
@@ -43,8 +45,9 @@
   flex-wrap: wrap;
 }
 
-.geography li div p,
-.info li div p {
+.geography li p,
+.info li p {
+  color: var(--text-color);
   min-width: fit-content;
 }
 
@@ -53,7 +56,7 @@
 }
 
 .borders > span {
-  color: hsl(200, 15%, 8%);
+  color: var(--text-color);
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -68,8 +71,8 @@
 
 .countries > a {
   display: block;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(200, 15%, 8%);
+  background-color: var(--header-color);
+  color: var(--text-color);
   font-size: 0.8rem;
   padding: 0.3rem;
   text-decoration: none;
@@ -79,4 +82,10 @@
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: hover) {
+  .countries > a:hover {
+    background-color: var(--filter-hover);
+  }
 }

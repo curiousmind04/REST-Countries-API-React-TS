@@ -8,8 +8,8 @@
 .container > a {
   display: block;
   width: 7.4rem;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(200, 15%, 8%);
+  background-color: var(--header-color);
+  color: var(--text-color);
   padding: 0.5rem 1rem;
   text-decoration: none;
   display: flex;
@@ -22,7 +22,8 @@
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container > a > img {
+.container > a > svg {
+  color: var(--text-color);
   height: 1.3rem;
   width: 1.6rem;
 }
@@ -30,4 +31,10 @@
 .error {
   font-weight: 800;
   text-align: center;
+}
+
+@media (hover: hover) {
+  .container > a:hover {
+    background-color: var(--filter-hover);
+  }
 }

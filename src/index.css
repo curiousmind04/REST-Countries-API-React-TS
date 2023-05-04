@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 :root {
+  --background-color: hsl(0, 0%, 98%);
+  --header-color: hsl(0, 0%, 100%);
+  --text-color: hsl(200, 15%, 8%);
+  --input-text: hsl(0, 0%, 52%);
+  --chosen-filter: hsl(187, 73%, 85%);
+  --filter-hover: hsl(0, 0%, 93%);
+  --theme-icon: hsl(0, 0%, 100%);
+  --link-hover: hsl(204, 31%, 61%);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -8,14 +17,26 @@
   -webkit-text-size-adjust: 100%;
 }
 
+[data-theme="dark"] {
+  --background-color: hsl(207, 26%, 17%);
+  --header-color: hsl(209, 23%, 22%);
+  --text-color: hsl(0, 0%, 100%);
+  --input-text: hsl(0, 0%, 100%);
+  --chosen-filter: hsl(0, 2%, 35%);
+  --filter-hover: hsl(206, 7%, 43%);
+  --theme-icon: hsl(0, 0%, 100%);
+  --link-hover: hsl(204, 74%, 79%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* transition: all 0.3s ease-in-out; */
 }
 
 body {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--background-color);
   font-family: "Nunito Sans", sans-serif;
   min-height: 100vh;
   position: relative;

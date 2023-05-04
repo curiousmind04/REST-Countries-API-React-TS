@@ -1,17 +1,19 @@
-.search {
-  background-image: url("/images/search.svg");
-  background-repeat: no-repeat;
-  background-position: left 1.5rem top 1.08rem;
-  background-size: 1.2rem 1.2rem;
-  color: hsl(0, 0%, 52%);
+.contain {
   width: 90%;
+  margin-inline: 5%;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.search {
+  background-color: var(--header-color);
+  color: var(--input-text);
+  width: 100%;
   height: 3.375rem;
   padding-left: 4rem;
   padding-right: 0.5rem;
-  margin-inline: 5%;
-  margin-bottom: 3rem;
   font: inherit;
-  font-weight: 600;
+  font-weight: 300;
   border: none;
   border-radius: 0.5rem;
   outline: none;
@@ -20,7 +22,18 @@
 }
 
 .search::placeholder {
+  color: var(--input-text);
   font-weight: 300;
+}
+
+.search ~ svg {
+  height: 1.2rem;
+  width: 1.2rem;
+  color: var(--input-text);
+  position: absolute;
+  top: 1.05rem;
+  left: 1.5rem;
+  z-index: 1;
 }
 
 .backdrop {
@@ -47,7 +60,7 @@
 
 .open,
 .closed {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--header-color);
   padding: 1rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -61,22 +74,27 @@
 
 .open > span,
 .closed > span {
-  color: hsl(200, 15%, 8%);
-  font-weight: 600;
+  color: var(--text-color);
+  font-weight: 300;
 }
 
-.open > img,
-.closed > img {
+.open > svg,
+.closed > svg {
   height: 0.8rem;
   width: 1rem;
 }
 
-.open > img {
+.closed > svg path,
+.open > svg path {
+  color: var(--text-color);
+}
+
+.open > svg {
   rotate: 180deg;
 }
 
 .options {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--header-color);
   width: 100%;
   padding: 0.4rem 0 0.4rem 0;
   border-radius: 0.5rem;
@@ -86,14 +104,14 @@
 }
 
 .options > div {
-  color: hsl(200, 15%, 8%);
-  font-weight: 600;
+  color: var(--text-color);
+  font-weight: 300;
   padding: 0.6rem 0.6rem 0.3rem 1rem;
   cursor: pointer;
 }
 
 .options > .chosen {
-  background-color: hsl(187, 73%, 85%) !important;
+  background-color: var(--chosen-filter) !important;
 }
 
 .error {
@@ -105,6 +123,6 @@
 
 @media (hover: hover) {
   .options > div:hover {
-    background-color: hsl(0, 0%, 93%);
+    background-color: var(--filter-hover);
   }
 }

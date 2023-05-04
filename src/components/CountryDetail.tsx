@@ -8,7 +8,8 @@ type Props = {
 };
 
 const CountryDetail: React.FC<Props> = ({ country, countries }) => {
-  console.log(country);
+  //   console.log(country);
+
   const borderCountries: Country[] = [];
 
   country.borders?.forEach((border) => {
@@ -34,7 +35,7 @@ const CountryDetail: React.FC<Props> = ({ country, countries }) => {
     languagesData.push(Object.values(country.languages)[i]);
   }
 
-  console.log(languagesData);
+  //   console.log(languagesData);
 
   return (
     <>
