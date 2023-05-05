@@ -12,6 +12,7 @@
   color: var(--text-color);
   padding: 0.5rem 1rem;
   text-decoration: none;
+  border-radius: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,5 +43,16 @@
 @media (max-width: 22rem) {
   .container > a {
     margin-bottom: 2.6rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .container {
+    width: 88%;
+    max-width: 88%;
+  }
+  .container > a {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 }

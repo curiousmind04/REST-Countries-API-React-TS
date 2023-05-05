@@ -150,3 +150,27 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 56rem) {
+  .actions {
+    width: 88%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .contain {
+    width: 30rem;
+    margin: 0;
+  }
+  .filter {
+    width: 12.6rem;
+    margin: 0;
+  }
+  .open,
+  .closed {
+    margin: 0;
+  }
+}

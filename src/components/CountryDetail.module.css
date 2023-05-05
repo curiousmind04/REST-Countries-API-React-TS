@@ -10,7 +10,7 @@
   vertical-align: bottom;
 }
 
-.flag ~ h2 {
+.right h2 {
   color: var(--text-color);
   margin-bottom: 1rem;
 }
@@ -96,7 +96,7 @@
   .flag {
     height: 11rem;
   }
-  .flag ~ h2 {
+  .right h2 {
     font-size: 1.3rem;
   }
   .geography li h3,
@@ -110,5 +110,52 @@
   }
   .countries {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 60rem) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+  }
+  .flag {
+    height: 18rem;
+    width: 48%;
+    max-width: 38rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+  .right {
+    width: 100%;
+    max-width: 45rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .right h2 {
+    margin-bottom: 2rem;
+  }
+  .middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .middle > :first-child {
+    width: 40%;
+    flex-shrink: 0;
+  }
+  .geography,
+  .info {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 78rem) {
+  .flag {
+    height: 25rem;
   }
 }

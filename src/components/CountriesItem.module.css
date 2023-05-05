@@ -81,3 +81,18 @@
     font-size: 0.85rem;
   }
 }
+
+@media (min-width: 56rem) {
+  .flag {
+    height: 10rem;
+  }
+  .item {
+    width: calc((100% - 6.4rem) / 3);
+  }
+}
+
+@media (min-width: 78rem) {
+  .item {
+    width: calc((100% - 9.6rem) / 4);
+  }
+}

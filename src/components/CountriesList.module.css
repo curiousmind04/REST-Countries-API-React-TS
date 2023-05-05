@@ -9,3 +9,16 @@
     max-width: 90%;
   }
 }
+
+@media (min-width: 56rem) {
+  .list {
+    width: 88%;
+    max-width: 88%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 3.2rem;
+    row-gap: 3rem;
+  }
+}
