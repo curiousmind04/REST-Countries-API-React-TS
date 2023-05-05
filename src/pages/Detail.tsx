@@ -15,7 +15,9 @@ const DetailPage: React.FC<Props> = ({ countries }) => {
   useEffect(() => {
     if (countries) {
       setCountry(
-        countries.find((country) => country.name.common === params.id)
+        countries.find(
+          (country) => country.name.common.replace(/\s+/g, "") === params.id
+        )
       );
     }
   }, [params.id, countries]);

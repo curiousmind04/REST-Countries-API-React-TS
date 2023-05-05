@@ -150,7 +150,7 @@ const CountryDetail: React.FC<Props> = ({ country, countries }) => {
             <div className={classes.countries}>
               {borderCountries.map((borderCountry) => (
                 <Link
-                  to={`/${borderCountry.name.common}`}
+                  to={`/${borderCountry.name.common.replace(/\s+/g, "")}`}
                   key={borderCountry.name.common}
                 >
                   {borderCountry.name.common}

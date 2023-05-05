@@ -13,7 +13,7 @@ const CountriesItem: React.FC<Props> = ({ country }) => {
         <img src={country.flags.png} alt="flag image" />
       </div>
       <div className={classes.info}>
-        <Link to={country.name.common}>
+        <Link to={country.name.common.replace(/\s+/g, "")}>
           <h2>{country.name.common}</h2>
         </Link>
         <div>
