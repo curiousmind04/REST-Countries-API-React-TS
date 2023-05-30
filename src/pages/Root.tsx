@@ -9,15 +9,15 @@ const RootLayout = () => {
   const themeHandler = () => {
     if (theme === "light") {
       setTheme("dark");
-      document.querySelector("body")?.setAttribute("data-theme", "dark");
+      // document.querySelector("body")?.setAttribute("data-theme", "dark");
     } else {
       setTheme("light");
-      document.querySelector("body")?.setAttribute("data-theme", "light");
+      // document.querySelector("body")?.setAttribute("data-theme", "light");
     }
   };
 
   return (
-    <>
+    <div data-theme={theme} className="app">
       <header className={classes.header}>
         <h1>Where in the world?</h1>
         <div className={classes.theme} onClick={themeHandler}>
@@ -41,7 +41,7 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 };
 

@@ -36,8 +36,12 @@
 }
 
 body {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   font-family: "Nunito Sans", sans-serif;
   min-height: 100vh;
   position: relative;
+}
+
+.app {
+  background-color: var(--background-color);
 }
