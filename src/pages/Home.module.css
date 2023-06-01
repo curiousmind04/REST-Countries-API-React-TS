@@ -114,9 +114,14 @@
   background-color: var(--chosen-filter) !important;
 }
 
+/* had to give margin bottom 15rem below so that if there are no countries
+then the region modal that has position absolute will still be inside
+the .app div */
+
 .error {
   font-weight: 800;
   text-align: center;
+  padding-bottom: 15rem;
 }
 
 /* custom select filter end */

@@ -2,6 +2,11 @@
   max-width: 85%;
   margin-inline: auto;
   list-style: none;
+  padding-bottom: 2rem;
+}
+
+.list > :last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 19.25rem) {

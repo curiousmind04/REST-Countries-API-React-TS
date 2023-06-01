@@ -170,9 +170,10 @@ const HomePage: React.FC<Props> = ({ countries }) => {
       {filteredCountries && filteredCountries.length !== 0 && (
         <CountriesList countriesData={filteredCountries} />
       )}
-      {!filteredCountries && !countries && (
-        <div className={classes.error}>No Countries Found</div>
-      )}
+      {(!filteredCountries && !countries) ||
+        (filteredCountries?.length === 0 && (
+          <div className={classes.error}>No Countries Found</div>
+        ))}
     </div>
   );
 };
